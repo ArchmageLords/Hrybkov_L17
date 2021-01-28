@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/me"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline4"
+        app:layout_constraintRight_toRightOf="@id/guideline5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBrother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brother"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline5"
+        app:layout_constraintRight_toRightOf="@id/guideline6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sister"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline3"
+        app:layout_constraintRight_toRightOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/firstGenerationBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="@dimen/margin_top"
+        app:constraint_referenced_ids="btnMe, btnSister, btnBrother" />
+
+    <Button
+        android:id="@+id/btnMother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mother"
+        android:textAllCaps="false"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/guideline5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnFather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/father"
+        android:textAllCaps="false"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/firstGenerationBarrier" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/secondGenerationBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="@dimen/margin_top"
+        app:constraint_referenced_ids="btnMother, btnFather" />
+
+    <Button
+        android:id="@+id/btnMotherOfMother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mother_of_mother"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline6"
+        app:layout_constraintRight_toRightOf="@id/guideline7"
+        app:layout_constraintTop_toBottomOf="@id/secondGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnFatherOfMother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/father_of_mother"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline5"
+        app:layout_constraintRight_toRightOf="@id/guideline6"
+        app:layout_constraintTop_toBottomOf="@id/secondGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnMotherOfFather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mather_of_father"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline2"
+        app:layout_constraintRight_toRightOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/secondGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnFatherOfFather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/father_of_father"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline3"
+        app:layout_constraintRight_toRightOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/secondGenerationBarrier" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/thirdGenerationBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="@dimen/margin_top"
+        app:constraint_referenced_ids="btnMotherOfMother, btnFatherOfMother, btnMotherOfFather, btnFatherOfFather" />
+
+    <Button
+        android:id="@+id/btnMotherOfMotherOfMother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mother_of_mother_of_mother"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline7"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thirdGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnFatherOfMatherOfMother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/father_of_mother_of_mother"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline6"
+        app:layout_constraintRight_toRightOf="@id/guideline7"
+        app:layout_constraintTop_toBottomOf="@id/thirdGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnMotherOfFatherOfMother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mother_of_father_of_mother"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline5"
+        app:layout_constraintRight_toRightOf="@id/guideline6"
+        app:layout_constraintTop_toBottomOf="@id/thirdGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnFatherOfFatherOfMother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/father_of_father_of_mother"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline4"
+        app:layout_constraintRight_toRightOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/thirdGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnMatherOfMotherOfFather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mather_of_mother_father"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/thirdGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnFatherOfMotherOfFather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/father_of_mother_of_father"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline1"
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/thirdGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnMotherOfFatherOfFather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mother_of_father_of_father"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline2"
+        app:layout_constraintRight_toRightOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/thirdGenerationBarrier" />
+
+    <Button
+        android:id="@+id/btnFatherOfFatherOfFather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/father_of_father_of_father"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@id/guideline3"
+        app:layout_constraintRight_toRightOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/thirdGenerationBarrier" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/fourthGenerationBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="@dimen/margin_top"
+        app:constraint_referenced_ids="btnMotherOfMotherOfMother, btnFatherOfMatherOfMother, btnMotherOfFatherOfMother, btnFatherOfFatherOfMother, btnMatherOfMotherOfFather, btnFatherOfMotherOfFather, btnMotherOfFatherOfFather, btnFatherOfFatherOfFather" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.125" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.375" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.625" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.750" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.875" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

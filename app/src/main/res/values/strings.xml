@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Hrybkov_L17</string>
+    <string name="button">Button</string>
+    <string name="me">Me</string>
+    <string name="brother">Brother</string>
+    <string name="sister">Sister</string>
+    <string name="mother">Mother</string>
+    <string name="father">Father</string>
+    <string name="mother_of_mother">MofM</string>
+    <string name="father_of_mother">FofM</string>
+    <string name="mather_of_father">MofF</string>
+    <string name="father_of_father">FofF</string>
+    <string name="mother_of_mother_of_mother">MofMofM</string>
+    <string name="father_of_mother_of_mother">FofMofM</string>
+    <string name="mother_of_father_of_mother">MofFofM</string>
+    <string name="father_of_father_of_mother">FofFofM</string>
+    <string name="mather_of_mother_father">MofMofF</string>
+    <string name="father_of_mother_of_father">FofMofF</string>
+    <string name="mother_of_father_of_father">MofFofF</string>
+    <string name="father_of_father_of_father">FofFofF</string>
+</resources>
